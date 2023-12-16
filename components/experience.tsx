@@ -82,7 +82,7 @@ export default function Experience() {
     )
 }*/
 
-"use client";
+/*"use client";
 
 import React from "react";
 import SectionHeading from "./section-heading";
@@ -140,4 +140,30 @@ export default function Experience() {
       </VerticalTimeline>
     </section>
   );
+}*/
+
+"use client";
+// Experience.tsx
+import React from "react";
+import { VerticalTimeline } from "react-vertical-timeline-component";
+import TimelineElement from "./TimelineElement";
+import { experiencesData } from "@/lib/data";
+import { TimeLineItem } from "@/lib/types"; // Import the appropriate types
+
+const Experience: React.FC = () => {
+  return (
+    <section
+      className="my-20 flex w-full scroll-mt-28 flex-col items-center justify-center gap-10"
+      id="experience"
+    >
+      <VerticalTimeline lineColor="#e4e4e7">
+        {experiencesData.map((item: TimeLineItem, index: number) => (
+          <TimelineElement key={index} item={item} />
+        ))}
+      </VerticalTimeline>
+    </section>
+  );
 }
+
+export default Experience;
+
