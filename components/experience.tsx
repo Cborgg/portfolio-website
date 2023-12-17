@@ -149,6 +149,8 @@ import { VerticalTimeline } from "react-vertical-timeline-component";
 import TimelineElement from "./TimelineElement";
 import { experiencesData } from "@/lib/data";
 import { TimeLineItem } from "@/lib/types"; // Import the appropriate types
+import SectionHeading from "./section-heading";
+
 
 const Experience: React.FC = () => {
   return (
@@ -156,6 +158,7 @@ const Experience: React.FC = () => {
       className="my-20 flex w-full scroll-mt-28 flex-col items-center justify-center gap-10"
       id="experience"
     >
+        <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="#e4e4e7">
         {experiencesData.map((item: TimeLineItem, index: number) => (
           <TimelineElement key={index} item={item} />
